@@ -144,7 +144,7 @@ export const projectsList = [
     // },
     {
         title: "GAMS Portal",
-        description: "Description for Project Two.",
+        description: "A student portal for scholarship applications, enabling users to answer eligibility criteria set by administrators and track the status of their applications efficiently in a user-friendly interface.",
         slides: [
             "/GAMS/dashboard.png",
             "/GAMS/questions.png",
@@ -158,7 +158,7 @@ export const projectsList = [
     },
     {
         title: "Oxte Website",
-        description: "Description for Project Three.",
+        // description: "A simple website",
         slides: [
             "/oxte/landing.png",
             "/oxte/section.png",

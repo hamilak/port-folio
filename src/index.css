@@ -43,3 +43,16 @@
   border: 2px solid hsl(298, 71%, 54%);
   clip-path: polygon(0 0, 50% 50%, 100% 0);
 }
+
+@keyframes roll {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.animate-roll {
+  animation: roll 2s linear infinite;
+}

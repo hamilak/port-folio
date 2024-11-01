@@ -4,7 +4,7 @@ import { projectsList } from '../utils/lists';
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 import { GoLinkExternal } from "react-icons/go";
 
-const AboutProject = () => {
+const ProjectInformation = () => {
     const { title } = useParams();
     const navigate = useNavigate()
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -48,17 +48,19 @@ const AboutProject = () => {
                     </div>
                     <ul className='list-inside list-disc mt-2'>
                         {project.stack.map((item) => (
-                           <li className='md:text-base text-sm'>{item}</li> 
+                            <li className='md:text-base text-sm'>{item}</li>
                         ))}
                     </ul>
                 </div>
-                <div className='bg-blue-50 p-4 my-4 rounded-md'>
-                    <h4 className='md:text-xl text-base uppercase'>Description</h4>
-                    <p className="text-sm md:text-base mt-2">{project.description}</p>
-                </div>
+                {project.description && (
+                    <div className='bg-blue-50 p-4 my-4 rounded-md'>
+                        <h4 className='md:text-xl text-base uppercase'>Description</h4>
+                        <p className="text-sm md:text-base mt-2">{project.description}</p>
+                    </div>
+                )}
             </div>
         </div>
     );
 }
 
-export default AboutProject
+export default ProjectInformation

@@ -6,9 +6,9 @@ const Home = () => {
     return (
         <div className='flex justify-center items-center h-screen overflow-hidden p-8'>
             <div className='flex flex-col justify-center items-center gap-6'>
-                <div className='relative w-52 h-52 border border-pink-300 flex justify-center items-center rounded-full overflow-hidden'>
-                    <div className='w-44 h-44 rounded-full border border-blue-900 absolute bg-transparent'></div>
-                    <div className='w-48 h-48 rounded-full overflow-hidden'>
+                <div className='relative w-56 h-56 border border-pink-300 flex justify-center items-center rounded-full overflow-hidden'>
+                    <div className='w-48 h-48 rounded-full border border-blue-900 absolute bg-transparent'></div>
+                    <div className='w-52 h-52 rounded-full overflow-hidden'>
                         <img
                             src="/mypicture.png"
                             alt="My Picture"
@@ -20,7 +20,7 @@ const Home = () => {
                 <div>
                     <div className='leading-10 text-base md:text-xl text-center'>
                         <p>
-                            Hello, my name is <span className='font-head-font font-semibold text-2xl '>KALIMAH ARIGBABU.</span>
+                            <span className='font-head-font font-semibold text-2xl '>KALIMAH ARIGBABU.</span>
                         </p>
                         <p>Your friendly neighbourhood <span className='text-decorate font-semibold'>full-stack web developer</span> currently based in Nigeria.</p>
                     </div>
