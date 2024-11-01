@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "M PLUS 2", sans-serif;
+}
+
+.text-decorate {
+  padding: 3px;
+  background-image: linear-gradient(rgb(17, 17, 204), rgb(17, 17, 204));
+  background-size: 100% 4px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  transition: background-size .7s, background-position .5s ease-in-out;
+}
+
+.text-decorate:hover {
+  background-size: 100% 100%;
+  background-position: 0% 100%;
+  transition: background-position .7s, background-size .5s ease-in-out;
+  color: #fff;
+}
+
+.underlined {
+  position: relative;
+}
+
+.underline-clip:after {
+  content: '';
+  position: absolute;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 2px solid hsl(298, 71%, 54%);
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+}

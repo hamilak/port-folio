@@ -2,7 +2,12 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "head-font":["Kode Mono", "monospace"],
+        "logo-font": ["Style Script", "cursive"]
+      }
+    },
   },
   plugins: [],
 }
