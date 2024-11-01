@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
         <div className=''>
         <Navbar />
         </div>
-        <div className='mt-16 py-2 px-10' style={{ height: 'calc(100% - 16px)' }}>
+        <div className='mt-16 py-2 px-10'>
         {children}
         </div>
     </div>
