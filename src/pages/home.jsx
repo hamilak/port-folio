@@ -25,7 +25,7 @@ const Home = () => {
                         <p>Your friendly neighbourhood <span className='text-decorate font-semibold'>full-stack web developer</span> currently based in Nigeria.</p>
                     </div>
                     <div>
-                        <ul className='flex gap-8 justify-center mt-4'>
+                        <ul className='flex flex-wrap gap-8 justify-center mt-4'>
                             {programmingLanguages.map((item, index) => (
                                 <Whisper followCursor trigger='hover' speaker={<Tooltip>{item.name}</Tooltip>} key={index}>
                                     <li className="cursor-pointer">
