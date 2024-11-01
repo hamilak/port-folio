@@ -2,16 +2,46 @@ export const listMenu = ["home", "about", "projects", "contact"]
 
 export const services = [
     {
-        image: "https://img.icons8.com/sci-fi/48/web-design.png",
-        name: "Website development",
-        description: "Turning ideas into effortless, engaging websites, crafted with care and designed for impact."
+        image: "https://img.icons8.com/clouds/100/responsive-web.png",
+        name: "Website Development",
+        description: "Turning ideas into effortless, engaging websites, crafted with care and designed for impact.",
+        deliverables: [
+            "Fully responsive, SEO-friendly website",
+            "Clear documentation covering website architecture and setup",
+            "cPanel integration for streamlined website management, database configuration, and hosting controls",
+            "Source code hosted on GitHub",
+            "Post-launch support for deployment and monitoring"
+        ],
+        tools: [
+            "Frontend: React.js, Next.js, TypeScript, Tailwind CSS",
+            "Backend (optional): Node.js, Express, NestJS or serverless options with Firebase",
+            "CMS (if required): Headless CMS (Strapi, Contentful)",
+            "Hosting Setup with cPanel",
+            "APIs: RESTful APIs for integrating third-party services like payment systems, social media, and analytics",
+            "Version Control & Deployment: Git, GitHub, Vercel, Netlify, or AWS for hosting"
+        ]
     },
     {
-        image: "https://img.icons8.com/sci-fi/48/internet.png",
-        name: "Web app development",
-        description: "Crafting dynamic web applications with seamless API integration using Nestjs, Node, Next.js, React, Tailwind, and PostgreSQL. I focus on creating fast, reliable, and visually striking apps."
-    },
-]
+        image: "https://img.icons8.com/clouds/100/web.png",
+        name: "Web App Development",
+        description: "Crafting dynamic web applications with seamless API integration using NestJS, Node, Next.js, React, Tailwind, and PostgreSQL. I focus on creating fast, reliable, and visually striking apps.",
+        deliverables: [
+            "Responsive, accessible, fast-loading and secure web application",
+            "Documentation on architecture, API specifications, and setup",
+            "Source code with maintainable code structure",
+            "Deployment and post-launch support"
+        ],
+        tools: [
+            "Frontend: React.js, Next.js, TypeScript, Tailwind CSS",
+            "Backend: Node.js, NestJS, Express, TypeORM",
+            "Database: MongoDB, PostgreSQL, Redis",
+            "APIs: RESTful and GraphQL",
+            "Version Control & Deployment: Git, GitHub, Vercel, Netlify, or AWS for hosting",
+            "DevOps: Docker, CI/CD pipelines",
+            "Testing & QA: Jest, Postman"
+        ]
+    }
+];
 
 export const programmingLanguages = [
     {

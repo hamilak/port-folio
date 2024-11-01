@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <div className={`fixed top-0 right-0 left-0 z-50 border-b p-4 flex justify-between items-center bg-white`}>
-            <h5 className="font-bold font-logo-font text-xl">KALIMAH</h5>
+            <h5 className="font-bold font-logo-font text-xl cursor-pointer" onClick={() => navigate('/home')}>KALIMAH</h5>
 
             <button
                 onClick={toggleMenu}

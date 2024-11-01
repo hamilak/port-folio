@@ -20,7 +20,7 @@ const Home = () => {
                 <div>
                     <div className='leading-10 text-base md:text-xl text-center'>
                         <p>
-                            <span className='font-head-font font-semibold text-2xl '>KALIMAH ARIGBABU.</span>
+                            <span className='font-head-font font-semibold text-3xl '>KALIMAH ARIGBABU</span>
                         </p>
                         <p>Your friendly neighbourhood <span className='text-decorate font-semibold'>full-stack web developer</span> currently based in Nigeria.</p>
                     </div>
