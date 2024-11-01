@@ -7,10 +7,10 @@ const About = () => {
 
     const fixedPositions = [
         { x: 400, y: 50 },
-        { x: 100, y: 540 },  
-        { x: 500, y: 150 }, 
-        { x: 240, y: 300 }, 
-        { x: 480, y: 390 }, 
+        { x: 100, y: 540 },
+        { x: 500, y: 150 },
+        { x: 240, y: 300 },
+        { x: 480, y: 390 },
         { x: 280, y: 100 },
         { x: 250, y: 500 },
         { x: 550, y: 580 },
@@ -43,7 +43,9 @@ const About = () => {
                             ))}
                         </div>
                         <div className='flex justify-center'>
-                            <button className='px-5 py-3 m-4 hover:bg-pink-600 rounded-md bg-pink-500 text-white shadow-md font-bold'>Download CV</button>
+                            <a href="/Kalimah.Resume.pdf" download>
+                                <button className='px-5 py-3 m-4 hover:bg-pink-600 rounded-md bg-pink-500 text-white shadow-md font-bold'>Download CV</button>
+                            </a>
                         </div>
                     </div>
                 </div>
