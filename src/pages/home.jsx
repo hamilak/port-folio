@@ -25,7 +25,7 @@ const Home = () => {
                         <p>Your friendly neighbourhood <span className='text-decorate font-semibold'>full-stack web developer</span> currently based in Nigeria.</p>
                     </div>
                     <div>
-                        <ul className='flex flex-wrap gap-8 justify-center mt-4'>
+                        <ul className='flex flex-wrap gap-4 md:gap-8 justify-center mt-4'>
                             {programmingLanguages.map((item, index) => (
                                 <Whisper followCursor trigger='hover' speaker={<Tooltip>{item.name}</Tooltip>} key={index}>
                                     <li className="cursor-pointer">
@@ -37,7 +37,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <small className='absolute bottom-4 font-xs'>Icons by <a target="_blank" href="https://icons8.com">Icons8</a></small>
+            <small className='absolute md:bottom-4 bottom-0 font-xs'>Icons by <a target="_blank" href="https://icons8.com">Icons8</a></small>
         </div>
     )
 }
