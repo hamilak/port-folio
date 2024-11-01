@@ -6,6 +6,11 @@ import ServiceDrawer from '../components/ServiceDrawer';
 const About = () => {
     const [open, setOpen] = useState(false)
     const [selectedService, setSelectedService] = useState(null);
+    const navigate = useNavigate()
+
+    const handleContact = () => {
+        navigate('/contact')
+    }
 
     const handleClose = () => {
         setOpen(false)
@@ -44,14 +49,15 @@ const About = () => {
                             {services.map((item) => (
                                 <div key={item.name} className="rounded-md flex flex-col justify-between py-4">
                                     <div>
-                                        <div className='flex flex-row items-center justify-between'>
+                                        <div className='md:flex items-center justify-between'>
                                             <div className="flex gap-1 items-center">
                                                 <img className='mr-2' width="100" height="100" src={item.image} alt="service" />
                                                 <h5 className="font-bold uppercase">{item.name}</h5>
                                             </div>
+                                            <div className='flex justify-center'>
                                             <button onClick={() => openDrawer(item)} className='text-blue-500 hover:underline font-semibold'>View Service</button>
+                                            </div>
                                         </div>
-                                        {/* <p className="mb-4 font-semibold">{item.description}</p> */}
                                     </div>
                                 </div>
                             ))}
@@ -82,7 +88,7 @@ const About = () => {
                 </div>
             </div>
             {selectedService && (
-                <ServiceDrawer open={open} handleClose={handleClose} name={selectedService.name} description={selectedService.description} deliverables={selectedService.deliverables} tools={selectedService.tools} />
+                <ServiceDrawer open={open} handleClose={handleClose} name={selectedService.name} description={selectedService.description} deliverables={selectedService.deliverables} tools={selectedService.tools} handleContact={handleContact} />
             )}
         </div>
     );
