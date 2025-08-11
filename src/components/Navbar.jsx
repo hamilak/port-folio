@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className={`fixed top-0 right-0 left-0 z-50 border-b p-4 flex justify-between items-center bg-white`}>
             <h5 className="font-bold font-logo-font text-xl cursor-pointer" onClick={() => navigate('/home')}>KALIMAH</h5>
 
-            <button
+            {/* <button
                 onClick={toggleMenu}
                 className="block md:hidden focus:outline-none z-50"
             >
@@ -29,9 +29,9 @@ const Navbar = () => {
                 ) : (
                     <span className="text-2xl">&#10005;</span>
                 )}
-            </button>
+            </button> */}
 
-            <ul className={`fixed inset-0 bg-white flex-col justify-center items-center gap-6 font-semibold text-base uppercase font-head-font 
+            {/* <ul className={`fixed inset-0 bg-white flex-col justify-center items-center gap-6 font-semibold text-base uppercase font-head-font 
                             ${isOpen ? 'flex' : 'hidden'} md:flex md:bg-transparent md:flex-row md:static`}>
                 {listMenu.map((item) => (
                     <li
@@ -43,7 +43,7 @@ const Navbar = () => {
                         {item}
                     </li>
                 ))}
-            </ul>
+            </ul> */}
         </div>
     )
 }

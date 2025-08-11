@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { programmingLanguages, services } from '../utils/lists';
 import { useNavigate } from 'react-router-dom';
 import ServiceDrawer from '../components/ServiceDrawer';
+import { motion } from 'framer-motion'
 
 const About = () => {
     const [open, setOpen] = useState(false)
@@ -34,7 +35,12 @@ const About = () => {
 
     return (
         <div className='leading-8 py-4'>
-            <div className='w-full lg:w-1/2 float-left'>
+            <motion.div
+                className='w-full lg:w-3/5 mx-auto pr-4'
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+            >
                 <div className='mb-4'>
                     <div>
                         <p className='text-4xl mb-2 font-bold leading-snug'>My name is <span className='uppercase underline text-pink-600'>Kalimah Arigbabu</span>, I’m a full-stack web developer working and living in Nigeria.</p>
@@ -44,10 +50,10 @@ const About = () => {
                 </div>
                 <div className=''>
                     <div>
-                        <p className='mb-4 font-bold text-2xl'>SERVICES</p>
+                        <p className='mb-4 font-bold text-2xl underline'>SERVICES</p>
                         <div className=''>
                             {services.map((item) => (
-                                <div key={item.name} className="rounded-md flex flex-col justify-between py-4">
+                                <div key={item.name} className="rounded-md flex flex-col justify-between py-4 border-b shadow-xs">
                                     <div>
                                         <div className='md:flex items-center justify-between'>
                                             <div className="flex gap-1 items-center">
@@ -55,7 +61,7 @@ const About = () => {
                                                 <h5 className="font-bold uppercase">{item.name}</h5>
                                             </div>
                                             <div className='flex justify-center'>
-                                            <button onClick={() => openDrawer(item)} className='text-blue-500 hover:underline font-semibold'>View Service</button>
+                                                <button onClick={() => openDrawer(item)} className='text-blue-500 hover:underline font-semibold'>View Service</button>
                                             </div>
                                         </div>
                                     </div>
@@ -69,8 +75,8 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='hidden lg:block min-h-screen float-right w-1/2'>
+            </motion.div>
+            {/* <div className='hidden lg:block min-h-screen float-right w-1/2'>
                 <div style={{ width: '100%', height: '600px', position: 'relative' }}>
                     {programmingLanguages.map((item, index) => (
                         <div
@@ -86,7 +92,7 @@ const About = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
             {selectedService && (
                 <ServiceDrawer open={open} handleClose={handleClose} name={selectedService.name} description={selectedService.description} deliverables={selectedService.deliverables} tools={selectedService.tools} handleContact={handleContact} />
             )}
