@@ -100,6 +100,13 @@ export const projects = [
         link: "https://educator.repeatra.io/auth/login"
     },
     {
+        title: "Careergene",
+        description: "Careergene is an AI reccommendation system for students and graduates. A web app where students fill in their courses and education history to get a detailed tree of career prospects",
+        imageUrl: "/careergene.jpg",
+        role: "Frontend developer",
+        link: "https://app.careergene.org/login"
+    },
+    {
         title: "XpressScribe",
         description:
             "A web app where users can generate statement of purpose, letter of intent after filling a form. This tool allows users to create customized documents tailored to their needs using OpenAi.",
