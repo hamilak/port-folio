@@ -21,7 +21,32 @@ const ProjectSection = () => {
                             {isEven ? (
                                 <>
                                     <div className="p-4 shadow-sm border border-pink-500 rounded-md">
-                                        <h2 className="text-3xl font-bold">{project.title}</h2>
+                                        <div className="flex justify-between items-center">
+  <h2 className="text-3xl font-bold">{project.title}</h2>
+  <a
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-pink-600 hover:text-pink-800"
+    aria-label={`Visit ${project.title}`}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className="w-5 h-5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M13.5 6H19.5M19.5 6V12M19.5 6L10.5 15"
+      />
+    </svg>
+  </a>
+</div>
+                                        
                                         <p className="mt-2 leading-7 text-base">{project.description}</p>
                                         <p className='text-pink-600 text-base font-semibold'>Role - {project.role}</p>
                                     </div>
@@ -43,7 +68,31 @@ const ProjectSection = () => {
                                         />
                                     </div>
                                     <div className="p-4 shadow-sm border border-pink-500 rounded-md">
-                                        <h2 className="text-2xl font-bold">{project.title}</h2>
+                                    <div className="flex justify-between items-center">
+  <h2 className="text-3xl font-bold">{project.title}</h2>
+  <a
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-pink-600 hover:text-pink-800"
+    aria-label={`Visit ${project.title}`}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className="w-5 h-5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M13.5 6H19.5M19.5 6V12M19.5 6L10.5 15"
+      />
+    </svg>
+  </a>
+</div>
                                         <p className="mt-2 leading-7 text-base">{project.description}</p>
                                         <p className='text-pink-600 text-base font-semibold'>Role - {project.role}</p>
                                     </div>

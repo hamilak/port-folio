@@ -96,20 +96,23 @@ export const projects = [
         title: "Repeatra",
         description: "Repeatra is an AI-powered, gamified educational platform designed to transform passive learning into active, long-term mastery, especially through spaced repetition. It caters not only to students but also to educators and institutions seeking adaptive learning solutions.",
         imageUrl: "/repeatra.png",
-        role: "Backend developer"
+        role: "Backend developer",
+        link: "https://educator.repeatra.io/auth/login"
     },
     {
         title: "XpressScribe",
         description:
             "A web app where users can generate statement of purpose, letter of intent after filling a form. This tool allows users to create customized documents tailored to their needs using OpenAi.",
         imageUrl: "/Xpressscribe/soplist.png",
-        role: "Fullstack developer"
+        role: "Fullstack developer",
+        link: "https://github.com/hamilak"
     },
     {
         title: "SchoLAR",
         description: "A web application that streamlines the scholarship process for organizations and users. With four user roles—Admin, Assessor, Program Officer, and Finance Officer—each has specific permissions for efficient management. Users can easily browse available scholarships, submit applications, and monitor their status through a user-friendly dashboard. Admins can add scholarships and communicate directly with applicants.",
         imageUrl: "/scholar/admindash.png",
-        role: "Fullstack developer"
+        role: "Fullstack developer",
+        link: "https://github.com/hamilak"
     },
 ]
 
