@@ -1,103 +1,141 @@
-import React, { useState } from 'react';
-import { programmingLanguages, services } from '../utils/lists';
-import { useNavigate } from 'react-router-dom';
-import ServiceDrawer from '../components/ServiceDrawer';
+import React from 'react'
 import { motion } from 'framer-motion'
 
 const About = () => {
-    const [open, setOpen] = useState(false)
-    const [selectedService, setSelectedService] = useState(null);
-    const navigate = useNavigate()
+  return (
+    <section id='about' className="relative py-20 px-6 sm:px-10 lg:px-40 bg-dark-900">
+    <div className="flex flex-col md:flex-row justify-between items-start gap-8 max-w-7xl mx-auto">
+        {/* SERVICES */}
+        <motion.div
+            className="md:w-1/3 w-full scroll-mt-20"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+        >
+            <h3 className="text-3xl font-bold uppercase mb-8 bg-gradient-to-r from-accent-pink-light to-accent-purple text-transparent bg-clip-text">
+                Services
+            </h3>
+            <ul className="space-y-4">
+                {[
+                    {
+                        title: 'Website Development',
+                        desc: 'HTML, CSS, JavaScript, React, TailwindCSS',
+                        icon: <img src='https://img.icons8.com/nolan/64/code.png' alt="Code" className="w-12 h-12" />
+                    },
+                    {
+                        title: 'Web App Development',
+                        desc: 'NestJs, Postgres, MongoDB, REST APIs',
+                        icon: <img src='https://img.icons8.com/nolan/64/web.png' alt="Web" className="w-12 h-12" />
+                    },
+                    {
+                        title: 'Website Hosting',
+                        desc: 'Netlify, Vercel, AWS, Render, Digital Ocean, cPanel',
+                        icon: <img src='https://img.icons8.com/nolan/64/cloud.png' alt="Cloud" className="w-12 h-12" />
+                    },
+                    {
+                        title: 'DevOps & Deployment',
+                        desc: 'Git, GitHub Actions, Docker, CI/CD Pipelines, Cloudflare',
+                        icon: <img src='https://img.icons8.com/nolan/64/rocket.png' alt="Rocket" className="w-12 h-12" />
+                    }
+                ].map((service, index) => (
+                    <motion.li
+                        key={index}
+                        className="group relative bg-dark-800/30 backdrop-blur-sm p-5 rounded-xl border border-dark-700 hover:border-accent-pink transition-all duration-300"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        whileHover={{ scale: 1.02, x: 10 }}
+                    >
+                        {/* Hover glow effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-accent-pink/10 to-accent-purple/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
-    const handleContact = () => {
-        navigate('/contact')
-    }
-
-    const handleClose = () => {
-        setOpen(false)
-    }
-
-    const openDrawer = (service) => {
-        setSelectedService(service);
-        setOpen(true)
-    }
-
-    const fixedPositions = [
-        { x: 400, y: 50 },
-        { x: 100, y: 540 },
-        { x: 500, y: 150 },
-        { x: 240, y: 300 },
-        { x: 480, y: 390 },
-        { x: 280, y: 100 },
-        { x: 250, y: 500 },
-        { x: 550, y: 580 },
-    ];
-
-    return (
-        <div className='leading-8 py-4'>
-            <motion.div
-                className='w-full lg:w-3/5 mx-auto pr-4'
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-            >
-                <div className='mb-4'>
-                    <div>
-                        <p className='text-4xl mb-2 font-bold leading-snug'>My name is <span className='uppercase underline text-pink-600'>Kalimah Arigbabu</span>, I’m a full-stack web developer working and living in Nigeria.</p>
-                        <p className='font-medium text-xl leading-normal'>I started coding because I genuinely love solving problems, and over time, I’ve picked up a well-rounded set of skills, from building solid backends to creating smooth, responsive frontends. I’m always open to feedback, continuously refining my skills to deliver the best possible outcomes.</p>
-                        <p className='font-medium text-xl leading-normal'>Every day is an opportunity to learn something new in the world of tech, and that’s what keeps me motivated.</p>
-                    </div>
-                </div>
-                <div className=''>
-                    <div>
-                        <p className='mb-4 font-bold text-2xl underline'>SERVICES</p>
-                        <div className=''>
-                            {services.map((item) => (
-                                <div key={item.name} className="rounded-md flex flex-col justify-between py-4 border-b shadow-xs">
-                                    <div>
-                                        <div className='md:flex items-center justify-between'>
-                                            <div className="flex gap-1 items-center">
-                                                <img className='mr-2' width="100" height="100" src={item.image} alt="service" />
-                                                <h5 className="font-bold uppercase">{item.name}</h5>
-                                            </div>
-                                            <div className='flex justify-center'>
-                                                <button onClick={() => openDrawer(item)} className='text-blue-500 hover:underline font-semibold'>View Service</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
+                        <div className="relative flex items-start gap-3">
+                            {service.icon}
+                            <div className="flex-1">
+                                <span className="font-semibold text-white block mb-1">
+                                    {service.title}
+                                </span>
+                                <span className="text-sm text-gray-400">
+                                    {service.desc}
+                                </span>
+                            </div>
                         </div>
-                        <div className='flex justify-center'>
-                            <a href="/Kalimah.Resume.pdf" download>
-                                <button className='px-5 py-2 m-4 hover:bg-pink-600 rounded-md bg-pink-500 text-white shadow-md font-bold'>Download CV</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
-            {/* <div className='hidden lg:block min-h-screen float-right w-1/2'>
-                <div style={{ width: '100%', height: '600px', position: 'relative' }}>
-                    {programmingLanguages.map((item, index) => (
-                        <div
-                            key={item.name}
-                            className='absolute w-20 h-20 flex justify-center items-center rounded-full border-gray-200 border animate-roll'
-                            style={{
-                                top: `${fixedPositions[index]?.y}px`,
-                                left: `${fixedPositions[index]?.x}px`,
-                                transition: 'top 1s ease-in-out, left 1s ease-in-out',
-                            }}
-                        >
-                            <img src={item.imageSrc} alt={item.name} className='w-10 h-10' />
-                        </div>
-                    ))}
-                </div>
-            </div> */}
-            {selectedService && (
-                <ServiceDrawer open={open} handleClose={handleClose} name={selectedService.name} description={selectedService.description} deliverables={selectedService.deliverables} tools={selectedService.tools} handleContact={handleContact} />
-            )}
+                    </motion.li>
+                ))}
+            </ul>
+        </motion.div>
+
+        {/* Divider */}
+        <div className="hidden md:flex md:flex-col items-center">
+            <span className="h-full w-px bg-gradient-to-b from-transparent via-dark-700 to-transparent"></span>
         </div>
-    );
-};
 
-export default About;
+        {/* ABOUT */}
+        <motion.div
+            className="md:w-2/3 w-full scroll-mt-20"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+        >
+            <h3 className="text-3xl font-bold uppercase mb-6 bg-gradient-to-r from-accent-blue-light to-accent-purple text-transparent bg-clip-text">
+                About Me
+            </h3>
+
+            <div className="space-y-4 text-gray-300 leading-8">
+                <p className="text-lg">
+                    My name is{' '}
+                    <span className="font-semibold bg-gradient-to-r from-accent-pink to-accent-purple text-transparent bg-clip-text">
+                        Kalimah Arigbabu
+                    </span>
+                    , I'm a full-stack web developer working and living in Canada.
+                </p>
+                <p className="text-base">
+                    I started coding because I genuinely love solving problems, and over time, I've picked up a
+                    well-rounded set of skills, from building solid backends to creating smooth, responsive frontends.
+                    I'm always open to feedback, continuously refining my skills to deliver the best possible outcomes.
+                </p>
+                <p className="text-base">
+                    Every day is an opportunity to learn something new in the world of tech, and that's what keeps me motivated.
+                </p>
+
+                {/* Stats Section */}
+                <div className="pt-6 grid grid-cols-3 gap-4">
+                    <motion.div
+                        className="text-center p-4 bg-dark-800/50 backdrop-blur-sm rounded-lg border border-dark-700"
+                        whileHover={{ scale: 1.05 }}
+                    >
+                        <div className="text-3xl font-bold bg-gradient-to-r from-accent-pink to-accent-pink-light text-transparent bg-clip-text">
+                            3+
+                        </div>
+                        <div className="text-sm text-gray-400 mt-1">Years Experience</div>
+                    </motion.div>
+                    <motion.div
+                        className="text-center p-4 bg-dark-800/50 backdrop-blur-sm rounded-lg border border-dark-700"
+                        whileHover={{ scale: 1.05 }}
+                    >
+                        <div className="text-3xl font-bold bg-gradient-to-r from-accent-purple to-accent-purple-light text-transparent bg-clip-text">
+                            10+
+                        </div>
+                        <div className="text-sm text-gray-400 mt-1">Projects Done</div>
+                    </motion.div>
+                    <motion.div
+                        className="text-center p-4 bg-dark-800/50 backdrop-blur-sm rounded-lg border border-dark-700"
+                        whileHover={{ scale: 1.05 }}
+                    >
+                        <div className="text-3xl font-bold bg-gradient-to-r from-accent-blue to-accent-blue-light text-transparent bg-clip-text">
+                            100%
+                        </div>
+                        <div className="text-sm text-gray-400 mt-1">Client Satisfaction</div>
+                    </motion.div>
+                </div>
+            </div>
+        </motion.div>
+    </div>
+</section>
+  )
+}
+
+export default About
