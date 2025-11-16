@@ -93,11 +93,11 @@ export const programmingLanguages = [
 
 export const projects = [
     {
-        title: "Repeatra",
-        description: "Repeatra is an AI-powered, gamified educational platform designed to transform passive learning into active, long-term mastery, especially through spaced repetition. It caters not only to students but also to educators and institutions seeking adaptive learning solutions.",
+        title: "Luceo",
+        description: "Luceo is an AI-powered, gamified educational platform designed to transform passive learning into active, long-term mastery, especially through spaced repetition. It caters not only to students but also to educators and institutions seeking adaptive learning solutions.",
         imageUrl: "/repeatra.png",
-        role: "Backend developer",
-        link: "https://educator.repeatra.io/auth/login"
+        role: "Fullstack developer, majorly Backend",
+        link: "https://educator.luceoapp.com/auth/login"
     },
     {
         title: "Careergene",
